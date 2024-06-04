@@ -11,9 +11,7 @@ import { AdminModule } from './admin/admin.module';
   imports: [
     ConfigModule.forRoot(),
     AuthModule,
-    MongooseModule.forRoot(
-      'mongodb://root:pass@127.0.0.1:27017/stockMonitor?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false',
-    ),
+    MongooseModule.forRoot(process.env.MONGO_DB_STRING),
     StockModule,
     SubscriptionModule,
     AdminModule,

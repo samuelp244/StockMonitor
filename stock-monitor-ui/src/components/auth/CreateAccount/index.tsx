@@ -72,6 +72,13 @@ const CreateAccount = () => {
         dispatch(setAccessToken(response.data.data));
         dispatch(setUserData(response.data.data));
         router.push("/dashboard");
+      } else {
+        if (response.data.status === 409) {
+          toast({
+            title: "Error",
+            description: response.data.response.message,
+          });
+        }
       }
     } catch (error) {
       console.log(error);

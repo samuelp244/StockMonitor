@@ -69,14 +69,10 @@ const UserLogin = () => {
           router.push("/dashboard");
         }
       } else {
-        if (
-          response.data.status === 409 &&
-          response.data.response.code === "AUTH-L-2"
-        ) {
+        if (response.data.status === 409) {
           toast({
-            title: "Account Disabled",
-            description:
-              "Your account has been disabled. Please contact support for assistance.",
+            title: "Error",
+            description: response.data.response?.message,
           });
         }
       }
