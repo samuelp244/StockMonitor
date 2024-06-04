@@ -9,7 +9,7 @@ import type { RedisClientOptions } from 'redis';
   imports: [
     CacheModule.register<RedisClientOptions>({
       store: redisStore,
-      host: 'localhost',
+      host: 'redis',
       port: 6379,
     }),
   ],
