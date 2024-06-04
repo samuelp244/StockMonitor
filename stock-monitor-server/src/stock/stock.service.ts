@@ -52,7 +52,7 @@ export class StockService {
       if (cachedData) {
         return {
           success: true,
-          message: 'successfully fetched company info----------',
+          message: 'successfully fetched company info',
           companyInfo: cachedData,
         };
       }
@@ -69,7 +69,7 @@ export class StockService {
       await this.cacheManager.store.set(cacheKey, data, 86400000);
       return {
         success: true,
-        message: 'successfully fetched company info---',
+        message: 'successfully fetched company info',
         companyInfo: data,
       };
     } catch (error) {

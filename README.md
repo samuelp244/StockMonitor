@@ -4,7 +4,7 @@
 
 StockMonitor is a web application that allows users to subscribe to a wide range of stocks and track the company's analytics and historical data.
 
-## Tech Stack
+**Tech Stack**
 
 * **Backend:** NestJS, MongoDB, redis and jwt
 * **Frontend:** Next.js, tailwind and redux
@@ -46,7 +46,7 @@ The backend is meticulously structured into distinct modules, each encapsulating
 
 **Note:** Due to Alpha Vantage's API limitations, StockMonitor currently retrieves a static CSV file containing stock information for user display.
 
-**Development Environment Setup**
+***Development Environment Setup***
 
 To use on the StockMonitor app in local, ensure you have Docker and Docker Compose installed on your system.
 
